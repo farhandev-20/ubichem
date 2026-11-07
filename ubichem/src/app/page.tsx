@@ -293,13 +293,14 @@ export default function Home() {
               className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_4px_24px_-2px_rgba(27,94,32,0.06)] border border-border-subtle hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group flex flex-col items-center text-center"
             >
               {/* Photo Frame */}
-              <div className="relative w-full aspect-[3/4] max-w-[260px] rounded-2xl overflow-hidden bg-surface-container border-2 border-border-subtle group-hover:border-primary/40 shadow-md mb-6">
+              <div className="relative w-full aspect-[4/5] max-w-[270px] rounded-2xl overflow-hidden bg-surface-container border-2 border-border-subtle group-hover:border-primary/40 shadow-md mb-6">
                 <Image
                   src={leader.image}
                   alt={leader.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 270px, (max-width: 1024px) 280px, 320px"
+                  priority
                 />
               </div>
 
