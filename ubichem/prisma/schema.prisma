@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // SQLite for local dev — switch to "postgresql" for production
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Enquiry {
+  id             String   @id @default(cuid())
+  name           String
+  phone          String
+  email          String
+  city           String
+  productInterest String  @map("product_interest")
+  message        String
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@map("enquiries")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  message   String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("contacts")
+}
+
