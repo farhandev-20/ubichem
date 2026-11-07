@@ -179,3 +179,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-outline);
 }
+
+/* Hide Next.js Development Indicator */
+nextjs-portal,
+[data-nextjs-dev-indicator],
+[data-nextjs-toast],
+div[data-nextjs-dialog-overlay] {
+  display: none !important;
+}
